@@ -8,10 +8,8 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ResourcesComponent } from './pages/resources/resources.component';
 import { MachinesComponent } from './pages/machines/machines.component';
 import { PlanningComponent } from './pages/planning/planning.component';
-import { IssuesComponent } from './pages/issues/issues.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -61,10 +59,8 @@ import { CompressorFormComponent } from './pages/machines/compressor/compressor-
     SidenavComponent,
     MainComponent,
     DashboardComponent,
-    ResourcesComponent,
     MachinesComponent,
     PlanningComponent,
-    IssuesComponent,
     LogoutComponent,
     NavbarComponent,
     DispenserComponent,

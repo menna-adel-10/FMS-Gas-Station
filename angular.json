@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Flight-Booking-Agency": {
+    "FMS": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/flight-booking-agency",
+            "outputPath": "dist/FMS",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -49,12 +49,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "2mb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "40kb",
                   "maximumError": "4kb"
                 }
               ],
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Flight-Booking-Agency:build:production"
+              "browserTarget": "FMS:build:production"
             },
             "development": {
-              "browserTarget": "Flight-Booking-Agency:build:development"
+              "browserTarget": "FMS:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Flight-Booking-Agency:build"
+            "browserTarget": "FMS:build"
           }
         },
         "test": {
