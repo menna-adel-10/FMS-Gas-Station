@@ -1,0 +1,15 @@
+.map-view {
+  min-width: 100%;
+  min-height: 100vh;
+
+}
+
+
+@media screen and (max-width: 760px) {
+
+  .map-view {
+    margin-left: -80px;
+  }
+}
+
+

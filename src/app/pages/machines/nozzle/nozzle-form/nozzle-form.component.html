@@ -1,0 +1,48 @@
+<div mat-dialog-title>
+  <i class="fa fa-xmark" [mat-dialog-close]="false"></i>
+  <div class="box">
+    <img src="assets/gas-station-svgrepo-com/fuel.png" alt="">
+    <h5>Add New Nozzle</h5>
+  </div>
+
+</div>
+<form [formGroup]="eForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class="coolinput">
+    <label for="input" class="text">Nozzle Name</label>
+    <input type="text" placeholder="Placeholder..." name="input" required class="input" formControlName="stationName">
+  </div>
+
+  <div class="coolinput">
+    <label for="input" class="number">Channel ID</label>
+    <input type="number" placeholder="Placeholder..." name="input" class="input" formControlName="channelId">
+</div>
+
+</div>
+
+<div class="content">
+   <div class="row">
+    <div class="coolinput">
+    <label for="input" class="text">Station</label>
+    <input type="text" placeholder="Placeholder..." name="input" class="input" formControlName="location">
+</div>
+ </div>
+  </div>
+
+  <div class="content">
+   <div class="row">
+    <div class="coolinput">
+    <label for="input" class="text">Dispenser</label>
+    <input type="text" placeholder="Placeholder..." name="input" class="input" formControlName="description">
+
+  </div>
+  </div>
+</div>
+
+<div mat-dialog-actions class="action">
+  <button class="btn-outline" mat-button color="accent" appearance="outline" type="button" [mat-dialog-close]="false">Cancel</button>
+  <button class="btn" mat-raised-button color="accent" type="submit">
+   {{data ? 'Update' : 'Save'}}
+  </button>
+</div>
+</form>

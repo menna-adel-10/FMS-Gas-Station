@@ -1,0 +1,76 @@
+<nav class="nav">
+  <div class="head" [ngClass]="getHeadClass()">
+  <div class="head-content">
+    <div class="head-content-left">
+      <div class="data-container">
+
+        <div class="station-icon">
+          <img src="assets/gas-station-svgrepo-com/gas-station-svgrepo-com.png" class="station" alt="">
+          <div class="circle-indicator pulse"></div>
+        </div>
+        <div class="monitor-ratio">
+          <p>
+            2/3
+          </p>
+        </div>
+        <div class="monitor">
+          <p>Monitored <br> Stations</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="head-content-middle">
+          <div class="radio-inputs">
+           <label class="map-radio" [routerLink]="['map-view']">
+             <input type="radio" name="radio" checked=""
+             >
+             <span class="name">Map View</span>
+
+           </label>
+
+           <label class="radio" [routerLink]="['last-view']">
+            <input
+            type="radio"
+            name="radio"
+            checked=""
+
+            >
+            <span class="name">Last View</span>
+
+           </label>
+         </div>
+
+        </div>
+
+    <div class="head-content-right">
+      <div class="head-menu">
+        <div class="head-menu-item">
+
+          <div class="circle">
+            <div class="circle-indicator pulse"></div>
+          </div>
+
+          <div class="arrow">
+            <img src="/assets/circular-arrow-with-dots.svg" alt="">
+          </div>
+
+          <div class="time">
+            <p>20s</p>
+          </div>
+
+          <div class="update">
+            <p>Last <br> Update</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</nav>
+
+<router-outlet></router-outlet>

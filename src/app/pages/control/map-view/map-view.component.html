@@ -1,0 +1,29 @@
+<div class="map-view">
+  <kendo-map [center]="center" [zoom]="4" class="map">
+      <kendo-map-layers>
+        <kendo-map-tile-layer
+          [subdomains]="tileSubdomains"
+          [urlTemplate]="tileUrl"
+          attribution="&copy; <a href='https://osm.org/copyright'>OpenStreetMap contributors</a>">
+        </kendo-map-tile-layer>
+        <kendo-map-bubble-layer
+          [data]="bubbles"
+          locationField="Location"
+          valueField="Pop2010"
+          attribution=""
+          [style]="bubbleStyle"
+        >
+          <kendo-map-bubble-layer-tooltip>
+            <ng-template
+              kendoMapBubbleTooltipTemplate
+              let-dataItem="dataItem"
+              let-value="value"
+            >
+              {{ dataItem.City }} ({{ dataItem.Country }}): {{ value }}
+            </ng-template>
+          </kendo-map-bubble-layer-tooltip>
+        </kendo-map-bubble-layer>
+      </kendo-map-layers>
+    </kendo-map>
+</div>
+

@@ -1,0 +1,66 @@
+<div class="table-holder">
+
+  <table class="mat-table" mat-table matSort [dataSource]="dataSource" style="background-color: white;">
+
+    <ng-container matColumnDef="stationName">
+      <th class="header stationName-column" mat-header-cell *matHeaderCellDef>
+        <span>Station Name</span>
+
+      </th>
+      <td mat-cell class="mat-cell" style="color: #707070;" *matCellDef="let request">
+        <svg height="10" width="10" class="svg">
+          <circle cx="5" cy="5" r="5" [ngClass]="getStateColor(request.description)" />
+        </svg>
+        {{request.stationName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="channelId">
+      <th class="header channelId-column" mat-header-cell *matHeaderCellDef>
+        <span>Channel Id</span>
+
+      </th>
+      <td mat-cell class="mat-cell" style="color: #707070;" *matCellDef="let request">{{request.channelId}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+      <th class="header location-column" mat-header-cell *matHeaderCellDef>
+        <span>Location</span>
+
+      </th>
+      <td mat-cell class="mat-cell" style="color: #707070;" *matCellDef="let request">{{request.location}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th class="header description-column" mat-header-cell *matHeaderCellDef>
+        <span>Description</span>
+
+      </th>
+      <td mat-cell class="mat-cell" style="color: #707070;" *matCellDef="let request">{{request.description}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="state">
+      <th class="header state-column" mat-header-cell *matHeaderCellDef>
+
+      </th>
+      <!-- <td class="state-cell" mat-cell class="mat-cell" *matCellDef="let request">{{getdescriptionColor(request.description)}}</td> -->
+      <td class="state-cell" mat-cell *matCellDef="let request">
+        <div class="icons">
+          <i class="fa fa-edit delete" (click)="openEditForm(request)"></i>
+          <i class="fa fa-trash" (click)="deleteStation(request.id)"></i>
+
+        </div>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row class="mat-row" *matRowDef="let request; columns: columnsToDisplay"></tr>
+
+  </table>
+
+</div>
+
+
+<button class="btn" (click)="openAddEditForm()">
+  <i class="fa fa-add" style="margin-right: 10px;"></i>
+  Add New</button>

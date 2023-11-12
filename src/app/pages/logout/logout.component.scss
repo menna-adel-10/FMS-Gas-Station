@@ -1,0 +1,230 @@
+.login-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left-part {
+      width: 60%;
+      height: 100%;
+      background-image: url("/assets/gas-station-svgrepo-com/login-img/login-img.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-bottom: 200px;
+      margin-right: 300px;
+      color: #3d5161;
+      position: static;
+
+      .content-section {
+        left: 50%;
+        position: relative;
+        width: 70%;
+        height: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        transform: translate(10%, 130%);
+      }
+
+      strong {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      p {
+        font-weight: 500;
+        margin-top: 30px;
+      }
+
+      button {
+        color: #3d5161;
+        background: transparent;
+        border-radius: 35px;
+        border: 3px #3d5161 solid;
+        padding: 15px 15px;
+        font-weight: bold;
+        margin-top: 40px;
+        transition: all 0.5s ease;
+
+        &:hover {
+          background: #ff7f5c;
+          color: #ffffff;
+          border: 3px transparent solid;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .right-part {
+    width: 40%;
+    height: 200vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff7f5c;
+    margin-bottom: 380px;
+
+    form {
+      width: 100%;
+      text-align: center;
+      margin-top: 90px;
+
+      img {
+        margin-bottom: 200px;
+      }
+
+      .input-group {
+        width: 100%;
+        margin-bottom: 12px;
+
+        input {
+          width: 100%;
+          padding: 15px 15px;
+          border: none;
+          outline: none;
+          border-radius: 35px;
+          background: #ffffff99;
+          color: #3d5161;
+        }
+      }
+
+      .submit-action {
+        margin-top: 42px;
+
+        button {
+          width: 100%;
+          padding: 15px 15px;
+          border: none;
+          outline: none;
+          border-radius: 35px;
+          background: #ffffff;
+          font-weight: 800;
+          border: 1px solid #ffffff;
+          text-transform: uppercase;
+          color: #3d5161;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            transform: translateY(0.4rem);
+            cursor: pointer;
+          }
+
+        }
+        .account-btn {
+         visibility:hidden;
+
+       }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 630px) {
+  .login-screen {
+    width: 100%;
+    height: 100vh;
+
+    .left-part {
+      display: none;
+    }
+
+    .content-section {
+      left: 70%;
+      width: 100%;
+    }
+
+    strong {
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .right-part {
+      width: 500vw;
+      height: 80%;
+      padding: 10px;
+      border-radius: 30px;
+      background: #ff7f5c;
+      margin-bottom: -100px;
+
+      form {
+        margin-bottom: 100px;
+        .submit-action {
+       .account-btn {
+           visibility:visible;
+           margin-top: 15px;
+         }
+     }
+      }
+
+    }
+
+    form {
+      width: 100%;
+      text-align: center;
+      margin-top: 0;
+
+      img {
+        margin-bottom: 0;
+      }
+
+      .input-group {
+        width: 100%;
+        margin-bottom: -50px;
+
+        input {
+          padding: 10px 10px;
+        }
+      }
+
+    }
+
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .login-screen {
+    width: 100%;
+    height: 100vh;
+
+    .left-part {
+      width: 30%;
+      height: 100%;
+      margin-top: -200px;
+      margin-left: -150px;
+    }
+
+    .content-section {
+      left: 60%;
+      width: 100%;
+    }
+
+    strong {
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .right-part {
+      min-width: 70%;
+      min-height: 90vh;
+      margin: 0 0 150px -80px;
+
+    }
+  }
+}

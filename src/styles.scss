@@ -1,1 +1,163 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+
+$orange-palette: (
+  50: #ff7f5c33,
+  500: white,
+  700: #ff7f5c,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ),
+);
+
+$blue-palette: (
+  50: #e3f2fd,
+  100: #badffb,
+  200: #8fcbfa,
+  300: #61b7f7,
+  400: #3ca7f6,
+  500: #0c98f5,
+  600: #078ae7,
+  700: #0078d4,
+  800: #0067c2,
+  900: #0049a3,
+  A100: #c2e4ff,
+  A200: #addcff,
+  A400: #1f9eff,
+  A700: #3d5161,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ),
+);
+
+$gainsboro-palette: (
+  50: #f9f9fa,
+  100: #f3f3f4,
+  200: #ebebec,
+  300: #dcdcdd,
+  400: #b9b9ba,
+  500: #99999a,
+  600: #707071,
+  700: #5d5d5e,
+  800: #3e3e3f,
+  900: #1d1d1e,
+  A100: #f5f5f5,
+  A200: #eaeaeb,
+  A400: #d6d6d7,
+  A700: #c7c7c7,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: white,
+  ),
+);
+
+$FMS-primary: mat.define-palette($blue-palette, A700);
+$FMS-accent: mat.define-palette($orange-palette, 700, 500, 50);
+
+$FMS-warn: mat.define-palette($gainsboro-palette, A700);
+$FMS-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $FMS-primary,
+      accent: $FMS-accent,
+      warn: $FMS-warn,
+    ),
+    body: (
+      text-color: white,
+    ),
+  )
+);
+
+@include mat.all-component-themes($FMS-theme);
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat", sans-serif;
+}
+
+html {
+  background: #f9f5f3;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  background: #f9f5f3;
+}
+
+html,
+body {
+  font-family: "montserrat", sans-serif;
+  height: 100%;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ff7f5c #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 20%;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f4dbd4;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff7f5c;
+  border-radius: 10px;
+  border: 5px solid #ff7f5c;
+}
+
+$orange: #ff7f5c;
+$grid-bg: #ff7f5c33;

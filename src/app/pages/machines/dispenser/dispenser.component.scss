@@ -1,0 +1,210 @@
+.table-holder {
+  background-color: white;
+  padding: 15px;
+  padding-top: 5px;
+  border-radius: 15px;
+  margin: 40px 20px;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px #00000029;
+  min-width: 100%;
+  margin-top: -150px;
+}
+.list-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  margin: 5px;
+  cursor: pointer;
+  border-bottom: 1px #3d5161 solid;
+}
+/* ---------------------------------------------------------- */
+
+/* Table styles */
+/* ---------------------------------------------------------- */
+.mat-table {
+  width: 80%;
+}
+
+/* ---------------------------------------------------------- */
+
+/* Header styles */
+/* ---------------------------------------------------------- */
+.mat-header-cell {
+  color: #3d5161;
+}
+.mat-header-cell:not(:first-child) {
+  padding-left: 0;
+}
+
+/* Style just the text in the header */
+.mat-header-cell span {
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+/* Round the top table corners */
+.mat-header-cell:first-child {
+  border-top-left-radius: 5px;
+}
+.mat-header-cell:last-child {
+  border-top-right-radius: 5px;
+}
+
+.mat-header-row {
+  height: 3em;
+}
+
+.sort-icon {
+  height: 17px;
+  width: 17px;
+  color: white;
+}
+
+::ng-deep .mat-sort-header-arrow {
+  position: relative;
+  left: -1.5rem;
+  display: none !important;
+  opacity: 0;
+}
+
+.header {
+  padding: 5px;
+  border-bottom: 3px #cfd4d8 solid;
+}
+
+.mat-header-cell {
+  border-bottom: #979595 2px solid;
+}
+
+/* ---------------------------------------------------------- */
+
+/* Column styles */
+/* ---------------------------------------------------------- */
+.dispenserName-column,
+.channelId-column,
+.station-column,
+.line-column,
+.order-column,
+.position-column {
+  width: 15%;
+  padding-right: 3rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: start;
+  color: #707070;
+  font-weight: 600;
+}
+
+.svg {
+  margin-right: 5px;
+}
+
+.state-column {
+  width: 5%;
+  color: #707070;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.24px;
+}
+/* ---------------------------------------------------------- */
+
+/* Row styles */
+/* ---------------------------------------------------------- */
+.mat-row:nth-child(n) {
+  &:hover {
+    background-color: #f4f6fb;
+    transition: all 0.1s ease;
+  }
+}
+/* ---------------------------------------------------------- */
+
+/* Cell styles */
+/* ---------------------------------------------------------- */
+.state-cell {
+  text-align: left;
+  border-bottom: #d5d2d2 1px solid;
+
+  .icons {
+    margin-right: 10px;
+
+    i {
+      color: #ff7f5c;
+      margin-right: 16px;
+      background: #ff7f5c33;
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+      display: inline;
+      transition: all 0.3s ease-in-out;
+      font-size: 18px;
+
+      &:hover {
+        color: #ffffff;
+        background: #ff7f5c;
+      }
+    }
+
+    .delete {
+      color: #3d5161;
+      background: #3d516133;
+
+      &:hover {
+        color: #ffffff;
+        background: #3d5161;
+      }
+    }
+  }
+}
+.mat-cell {
+  border-bottom: #d5d2d2 1px solid;
+}
+
+.orange-svg {
+  fill: #ff7f5c;
+}
+.gray-svg {
+  fill: #e0e7f1;
+}
+/* ---------------------------------------------------------- */
+
+.btn {
+  background: #ff7f5c;
+  color: #fff;
+  padding: 8px 30px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  border: none;
+  float: right;
+  margin-right: 18px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  opacity: 1;
+  font-weight: bold;
+
+  &:hover {
+    color: #2e4a79;
+    background: #ffffff;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+
+
+@media screen and (max-width: 760px) {
+  .table-holder{
+    width: 155%;
+    margin-left: calc(-108px);
+  }
+
+  .header,
+  .mat-cell,
+  .icons i {
+    font-size: 10px;
+    padding: 1.6px;
+  }
+
+
+}

@@ -1,0 +1,243 @@
+nav {
+  .head {
+    z-index: 1;
+    transition: all 0.5s ease;
+    background: #f9f5f3;
+    position: fixed;
+    top: 0;
+
+    .head-content {
+      width: calc(100% + 8.5rem);
+      margin-left: -220px;
+      background: #fff;
+      color: #3d5161;
+      box-shadow: 0 0 10px 0 rgb(34 41 47 / 10%);
+      padding: 0.813rem 1.563rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .head-content-left {
+        .data-container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-left: 80px;
+
+          .circle-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 70%;
+            display: flex;
+            position: absolute;
+            background: #ff7f5c;
+
+            &.pulse {
+              animation: pulse-animation 1.2s infinite;
+            }
+          }
+
+          .station-icon {
+            width: 30px;
+            height: 25px;
+            display: flex;
+          }
+
+          .monitor-ratio {
+            font-size: 25px;
+            font-weight: 600;
+            margin: 0 10px;
+          }
+
+          .monitor {
+            font-size: 10px;
+            font-weight: 500;
+            display: flex;
+          }
+        }
+      }
+
+      .head-content-middle {
+        display: flex;
+        align-items: center;
+
+        .radio-inputs {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          border-radius: 1.5rem;
+          background-color: #f9f5f3;
+          box-sizing: border-box;
+          box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+          padding: 0.25rem;
+          width: 300px;
+          font-size: 14px;
+        }
+
+        .radio-inputs .map-radio {
+          flex: 1 1 auto;
+          text-align: center;
+        }
+
+        .radio-inputs .map-radio input {
+          display: none;
+        }
+
+        .radio-inputs .map-radio .name {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1.5rem;
+          border: none;
+          padding: 0.5rem 0;
+          color: rgba(51, 65, 85, 1);
+          transition: all 0.15s ease-in-out;
+        }
+
+        .radio-inputs .map-radio input:checked + .name {
+          background-color: #ff7f5c;
+          font-weight: 600;
+          color: #fff;
+        }
+
+        .radio-inputs .radio {
+          flex: 1 1 auto;
+          text-align: center;
+        }
+
+        .radio-inputs .radio input {
+          display: none;
+        }
+
+        .radio-inputs .radio .name {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1.5rem;
+          border: none;
+          padding: 0.5rem 0;
+          color: rgba(51, 65, 85, 1);
+          transition: all 0.15s ease-in-out;
+        }
+
+        .radio-inputs .radio input:checked + .name {
+          background-color: #ff7f5c;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+
+      .head-content-right {
+        display: flex;
+        align-items: center;
+
+        .head-menu {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-left: 1.25rem;
+
+          .head-menu-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 6px;
+            align-items: center;
+            margin-right: 80px;
+
+            .circle {
+              margin-right: 8px;
+            }
+
+            .circle-indicator {
+              width: 8px;
+              height: 8px;
+              top: 28px;
+              border-radius: 70%;
+              display: flex;
+              position: absolute;
+              background: #ff7f5c;
+              margin-right: 2.5rem;
+            }
+
+            .arrow {
+              width: 24px;
+              height: 24px;
+              display: flex;
+              font-weight: 600;
+            }
+
+            .time {
+              font-size: 25px;
+              font-weight: 500;
+            }
+
+            .update {
+              font-size: 10px;
+            }
+
+            .head-menu-item-btn:hover,
+            .head-menu-item-btn:focus {
+              background: #eff2f3;
+
+              .menu-icon {
+                color: #ff7f5c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .head-trimmed {
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem;
+  }
+
+  .head-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 127, 92);
+    }
+    100% {
+      box-shadow: 0 0 0 13px rgba(246, 206, 195);
+    }
+  }
+
+  @keyframes fall {
+    0% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .head {
+      .head-content {
+        .head-content-left {
+         visibility: hidden;
+        }
+
+        .head-content-right {
+         visibility: hidden;
+        }
+
+        .head-content-middle {
+          .radio-inputs {
+           padding: 0.35rem;
+            min-width: 385px;
+
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="machines-container">
+  <div class="mobile-view">
+    <button class="btn" *ngFor="let data of MachinesData"
+        [routerLink]="[data.routeLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+     <img class="image" [src]="[data.icon]"  alt="">
+
+  </button>
+  </div>
+
+<div class="cards">
+  <div class="card-content" [ngStyle]="getStyles()" *ngFor="let data of MachinesData;
+let i = index" [class.selected-card]="selectedCardIndex === i" (click)="selectCard(i)"
+      [routerLink]="[data.routeLink]"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">
+  <div class="content">
+    <img class="image" [src]="[data.icon]"  alt="">
+  <strong>{{data.label}}</strong>
+  </div>
+</div>
+
+</div>
+
+
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,143 @@
+i {
+  color: #3d5161;
+  display: inline;
+  float: right;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.box {
+  display: inline-block;
+   border-bottom: 3px #cfd4d8 solid;
+   width: 100%;
+
+  img {
+    display: flex;
+    width: 25px;
+    height: 25px;
+
+  }
+  h5 {
+    color: #3d5161;
+    display: flex;
+    margin-top: -20px;
+    margin-left: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  padding-top: 10px;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  padding: 10px 120px;
+}
+
+.row {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: static;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #3d5161;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 10px 0;
+  padding: 0 3px;
+  width: 100%;
+}
+
+.coolinput input[type="text"].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #3d5161 solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.coolinput input[type="text"].input:focus {
+  outline: none;
+}
+
+.coolinput label.number {
+  font-size: 0.75rem;
+  color: #3d5161;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 10px 0;
+  padding: 0 3px;
+  width: 100%;
+}
+
+.coolinput input[type="number"].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #3d5161 solid;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.coolinput input[type="number"].input:focus {
+  outline: none;
+}
+
+.action {
+  padding: 0 25px 20px;
+  float: right;
+
+  .btn {
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(autofit, 1fr));
+    grid-template-rows: autofit;
+    overflow: hidden;
+  }
+
+  .row {
+    width: 100%;
+    padding: 0;
+  }
+
+  .coolinput {
+    flex-direction: column;
+    width: 100%;
+    position: static;
+  }
+
+  .coolinput label.text,
+  .coolinput label.number {
+    font-size: 0.65rem;
+    color: #3d5161;
+    font-weight: 700;
+    position: relative;
+    width: 100%;
+    margin-left: -70px;
+  }
+
+  .coolinput input[type="text"].input,
+  .coolinput input[type="number"].input {
+    font-size: 0.65rem;
+    border: 2px #3d5161 solid;
+    border-radius: 5px;
+    width: 60vw;
+    margin-left: -80px;
+  }
+}

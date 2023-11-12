@@ -1,0 +1,76 @@
+<app-alert-nav></app-alert-nav>
+<div class="content-container">
+
+     <div class="cards" *ngFor="let item of Data">
+  <div class="card">
+  <div class="card-details">
+    <p class="text-title">{{item.num}}
+      <span>{{item.currency}}</span>
+    </p>
+
+    <p class="text-body">{{item.text}}</p>
+  </div>
+  <button class="card-button">More info</button>
+
+        <div class="title">
+        <p class="percent">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" fill="currentColor" height="20" width="20">
+                <path d="M1408 1216q0 26-19 45t-45 19h-896q-26 0-45-19t-19-45 19-45l448-448q19-19 45-19t45 19l448 448q19 19 19 45z">
+                </path>
+            </svg> {{item.percent}}%
+        </p>
+    </div>
+    </div>
+</div>
+
+ <div class="radio-inputs">
+           <label class="radio">
+             <input type="radio" name="radio-content" checked="">
+             <span class="name">
+               <i class="fa-solid fa-signal" style="margin-right: 3px;"></i>
+               Graph</span>
+           </label>
+
+          <label class="radio">
+             <input type="radio" name="radio-content" checked="">
+             <span class="name">
+               <i class="fa-solid fa-server" style="margin-right: 3px;"></i>
+               List</span>
+           </label>
+         </div>
+
+    <div class="sales-chart">
+       <div class="head" style="text-align: center; margin-bottom: 4px;">
+         Hourly Sales
+      </div>
+    <canvas id="canvas">{{radarChart}}</canvas>
+  </div>
+
+
+  <div class="status-chart">
+      <div class="head">
+        Station Activities Overview
+      </div>
+  <div class="chart">
+   <canvas id="canva">{{barChart}}</canvas>
+  </div>
+  </div>
+
+    <div class="station-sales">
+      <div class="head">
+        Sales by Station
+      </div>
+      <div class="bar-content" *ngFor="let item of Sales">
+        <img src={{item.img}} alt="">
+        <p>{{item.name}}</p>
+        <strong [ngClass]="getStateColor(item.color)">{{item.amount}}</strong>
+
+        <mat-progress-bar class="bar" mode="determinate" value={{item.value}} color="accent" [ngClass]="getStateColor(item.color)"></mat-progress-bar>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <router-outlet></router-outlet>

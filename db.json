@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "stationNames": [
+    {
+      "stationName": "Name",
+      "channelId": 1000,
+      "location": "212, Sydney st. Australia",
+      "description": "Closed",
+      "id": 1
+    },
+    {
+      "stationName": "Name",
+      "channelId": 1000,
+      "location": "212, Sydney st. Australia",
+      "description": "Submitted",
+      "id": 1
+    },
+    {
+      "stationName": "Name",
+      "channelId": 1000,
+      "location": "212, Sydney st. Australia",
+      "description": "Submitted",
+      "id": 1
+    },
+    {
+      "stationName": "Name",
+      "channelId": 506,
+      "location": "44, NewYork, USA",
+      "description": "Draft",
+      "id": 2
+    },
+    {
+      "stationName": "Name",
+      "channelId": 60,
+      "location": "106, Hurgada, Egypt",
+      "description": "Closed",
+      "id": 3
+    },
+    {
+      "stationName": "Name",
+      "channelId": 89,
+      "location": "101, Berlin, Germany",
+      "description": "Draft",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<div class="head">
+  <div class="filter">
+     <i class="fa-solid fa-filter"></i>
+    <span>Filter:</span>
+
+  <select [(ngModel)]="selectedOption">
+    <option value="1">Classes</option>
+    <option value="2">Monitoring</option>
+    <option value="3">Select All</option>
+  </select>
+
+  <div class="option-two">
+    <select [(ngModel)]="selectedOption" style="margin-left: 20px;">
+    <option value="1">Locations</option>
+    <option value="2">Stations</option>
+    <option value="3">Select All</option>
+  </select>
+
+  </div>
+
+  </div>
+
+  <div class="sort">
+    <i class="fa-solid fa-arrow-up-wide-short"></i>
+    <span>Sort By:</span>
+    <ul class="category-list">
+      <li class="category">Alarm</li>
+      <li class="category">Warning</li>
+      <li class="category">Dispenser</li>
+    </ul>
+  </div>
+</div>
+
+    <div class="stations" *ngFor="let item of View">
+  <div class="cards-view">
+    <div class="station-data">
+      <ul>
+        <div>
+        <svg height="10" width="10" class="svg">
+          <circle cx="5" cy="5" r="5" [ngClass]="getStateColor(item.image)"/>
+        </svg>
+        </div>
+        <li class="station">
+          <img src={{item.image}} alt="">
+          <p style="text-transform: uppercase;">{{item.title}}</p>
+
+        </li>
+
+        <li class="compression">
+          <div>
+            <p>{{item.compression}}</p>
+          <span>{{item.state}}</span>
+          </div>
+
+        </li>
+
+        <li class="alarms">
+          <img src={{item.alarm}} alt="">
+          <div>
+            <p>{{item.digit}}</p>
+          <span>{{item.count}}</span>
+          </div>
+
+        </li>
+
+        <li class="warning">
+          <img src={{item.alarm}} alt="">
+          <div>
+            <p>{{item.warns}}</p>
+          <span>
+            {{item.counts}}
+          </span>
+          </div>
+
+        </li>
+
+        <li class="dispenser">
+          <img src={{item.dispenser}} alt="">
+          <div>
+            <p>{{item.ratio}}</p>
+          <span>{{item.active}}</span>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+
+  </div>
+

@@ -1,0 +1,35 @@
+<div class="login-screen">
+  <div class="login-form">
+    <div class="left-part">
+      <div class="container-section">
+        <div class="content-section">
+          <strong>welcome to fms</strong>
+      <p>Ask the admin to create an account for you to <br> start viewing our Dashboards.</p>
+      <button class="account-btn" (click)="onLoginClick()">
+        Request Account
+      </button>
+        </div>
+      </div>
+
+    </div>
+    <div class="right-part">
+
+      <form>
+        <img src="assets/gas-station-svgrepo-com/brk-logo-trandy/brk-logo-trandy.png" alt="">
+        <div class="input-group">
+          <input type="email" placeholder="vesla@outlook.com" class="form-control">
+        </div>
+        <div class="input-group">
+
+          <input type="password" placeholder="PASSWORD" class="form-control">
+        </div>
+        <div class="submit-action">
+          <button type="submit" class="submit-btn" (click)="onLoginClick()">login</button>
+          <button class="account-btn" (click)="onLoginClick()">
+        Request Account
+      </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

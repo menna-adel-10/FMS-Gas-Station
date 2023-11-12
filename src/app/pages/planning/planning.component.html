@@ -1,0 +1,145 @@
+<app-alert-nav></app-alert-nav>
+
+<app-tabs-nav></app-tabs-nav>
+<div class="container">
+
+    <div class="card details">
+      <div class="head-details">
+        <p>Station Details</p>
+
+      <mat-tab-group class="tabs" color="accent">
+  <mat-tab label="Pressure">
+    <div class="info-body">
+        <div class="info-bar">
+        <circle-progress class="circle"
+  [percent]="8"
+  [radius]="70"
+  [outerStrokeWidth]="10"
+  [innerStrokeWidth]="10"
+  [showUnits]="true"
+  [outerStrokeColor]="'#00CBC0'"
+  [animation]="true"
+  [showInnerStroke]="false"
+  [showBackground]="true"
+  [showInnerStroke]="true"
+  [innerStrokeColor]="'#00CBC033'"
+  [animationDuration]="1200"
+  [animation]="true"
+  [animateTitle]="true"
+></circle-progress>
+<strong>m2</strong>
+      </div>
+      <div class="work-time">
+        <strong>350 kPa</strong>
+        <p>INLET PRESSURE</p>
+      </div>
+      <div class="power-time">
+        <strong>80 kPa avg</strong>
+        <p>STAGES PRESSURE</p>
+      </div>
+     </div>
+     </mat-tab>
+  <mat-tab label="Kpi">
+     <div class="info-body">
+        <div class="info-bar">
+        <circle-progress class="circle"
+  [percent]="85"
+  [radius]="70"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="10"
+  [showUnits]="true"
+  [outerStrokeColor]="'#FF7F5C'"
+  [animation]="true"
+  [showInnerStroke]="false"
+  [showBackground]="true"
+  [showInnerStroke]="true"
+  [innerStrokeColor]="'#F4DBD4'"
+  [animationDuration]="1300"
+  [animation]="true"
+  [animateTitle]="true"
+></circle-progress>
+<strong>CT / RT</strong>
+      </div>
+      <div class="work-time">
+        <strong>4365</strong>
+        <p>Total working <br> Time</p>
+      </div>
+      <div class="power-time">
+        <strong>5478</strong>
+        <p>Total Power <br> On Time</p>
+      </div>
+     </div>
+  </mat-tab>
+  <mat-tab label="Temperature">
+    <div class="info-body">
+        <div class="info-bar">
+        <circle-progress class="circle"
+  [percent]="35"
+  [radius]="70"
+  [outerStrokeWidth]="10"
+  [innerStrokeWidth]="10"
+  [showUnits]="true"
+  [outerStrokeColor]="'#2D62ED'"
+  [animation]="true"
+  [showInnerStroke]="false"
+  [showBackground]="true"
+  [showInnerStroke]="true"
+  [innerStrokeColor]="'#009ACF33'"
+  [animationDuration]="1200"
+  [animation]="true"
+  [animateTitle]="true"
+></circle-progress>
+<strong>°C / °F</strong>
+      </div>
+      <div class="info-time">
+      <div class="work-time">
+        <strong>100 Pa</strong>
+        <p>INLET TEMPERATURE</p>
+      </div>
+      <div class="power-time">
+        <strong>100 Pa avg</strong>
+        <p>STAGES TEMPERATURE</p>
+      </div>
+     </div>
+     </div>
+     </mat-tab>
+</mat-tab-group>
+      </div>
+
+    </div>
+    <div class="card alerts">
+      <div class="head">
+        Alerts
+        <div class="title">
+          total 100
+        </div>
+      </div>
+      <div class="main">
+        <div class="alert-data" *ngFor="let item of AlertData">
+          <div class="data1">
+            <strong>{{item.title}}</strong>
+            <p><small>{{item.date}}</small></p>
+
+          </div>
+          <div class="data2">
+            <p>{{item.state}}</p>
+            <p>{{item.intensity}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="card alarm">
+      <div class="head">
+         Alarm Classification
+      </div>
+
+      <div class="content">
+       <canvas id="bar">{{barChart}}</canvas>
+
+      </div>
+
+    </div>
+
+  </div>
+
