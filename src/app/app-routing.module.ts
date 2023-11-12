@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ResourcesComponent } from './pages/resources/resources.component';
 import { MachinesComponent } from './pages/machines/machines.component';
 import { PlanningComponent } from './pages/planning/planning.component';
-import { IssuesComponent } from './pages/issues/issues.component';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { StationsComponent } from './pages/machines/stations/stations.component';
 import { DispenserComponent } from './pages/machines/dispenser/dispenser.component';
@@ -29,7 +27,6 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
  },
-  {path: 'resources', component: ResourcesComponent},
   {
     path: 'machines',
     component: MachinesComponent,
@@ -51,7 +48,6 @@ const routes: Routes = [
     ]
   },
   {path: 'planning', component: PlanningComponent},
-  { path: 'issues', component: IssuesComponent},
   { path: 'logout', component: LogoutComponent },
    { path: '**', redirectTo: 'logout'},
 ];
