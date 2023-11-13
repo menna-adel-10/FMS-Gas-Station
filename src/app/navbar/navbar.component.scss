@@ -234,7 +234,9 @@ nav {
           .radio-inputs {
            padding: 0.35rem;
             min-width: 385px;
-
+            justify-content: center;
+            display: flex;
+            margin-left: -15%;
           }
         }
       }
