@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
+  standalone: true,
   selector: 'app-logout',
   templateUrl: './logout.component.html',
-  styleUrls: ['./logout.component.scss']
+  styleUrls: ['./logout.component.scss'],
+  host: {
+    'style': ' width: 100%; height: 100vh; justify-content: center;'
+  }
 })
 export class LogoutComponent {
 

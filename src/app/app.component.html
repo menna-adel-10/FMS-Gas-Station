@@ -1,7 +1,6 @@
 <div>
 <div *ngIf="showSideNav">
   <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
-
 </div>
 <app-main
 [collapsed]="isSideNavCollapsed"

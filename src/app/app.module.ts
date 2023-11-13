@@ -10,7 +10,6 @@ import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MachinesComponent } from './pages/machines/machines.component';
 import { PlanningComponent } from './pages/planning/planning.component';
-import { LogoutComponent } from './pages/logout/logout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
@@ -61,7 +60,6 @@ import { CompressorFormComponent } from './pages/machines/compressor/compressor-
     DashboardComponent,
     MachinesComponent,
     PlanningComponent,
-    LogoutComponent,
     NavbarComponent,
     DispenserComponent,
     CompressorComponent,

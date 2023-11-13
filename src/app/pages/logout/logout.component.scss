@@ -1,95 +1,83 @@
 .login-screen {
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  margin-top: -5.75rem;
+  margin-left: -5rem;
+  top: 0;
 
-  .login-form {
-    width: 100%;
+  .left-part {
+    width: 70%;
     height: 100%;
-    border-radius: 6px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url("/assets/gas-station-svgrepo-com/login-img/login-img.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    color: #3d5161;
 
-    .left-part {
-      width: 60%;
+    .content-section {
+      left: 50%;
+      position: relative;
+      width: 70%;
       height: 100%;
-      background-image: url("/assets/gas-station-svgrepo-com/login-img/login-img.png");
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      margin-bottom: 200px;
-      margin-right: 300px;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      transform: translate(-15%, 160%);
+    }
+
+    strong {
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 500;
+      margin-top: 30px;
+    }
+
+    button {
       color: #3d5161;
-      position: static;
+      background: transparent;
+      border-radius: 35px;
+      border: 3px #3d5161 solid;
+      padding: 15px 15px;
+      font-weight: bold;
+      margin-top: 40px;
+      transition: all 0.5s ease;
 
-      .content-section {
-        left: 50%;
-        position: relative;
-        width: 70%;
-        height: 100%;
-        display: block;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 100px;
-        transform: translate(10%, 130%);
-      }
-
-      strong {
-        font-size: 40px;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      p {
-        font-weight: 500;
-        margin-top: 30px;
-      }
-
-      button {
-        color: #3d5161;
-        background: transparent;
-        border-radius: 35px;
-        border: 3px #3d5161 solid;
-        padding: 15px 15px;
-        font-weight: bold;
-        margin-top: 40px;
-        transition: all 0.5s ease;
-
-        &:hover {
-          background: #ff7f5c;
-          color: #ffffff;
-          border: 3px transparent solid;
-          cursor: pointer;
-        }
+      &:hover {
+        background: #ff7f5c;
+        color: #ffffff;
+        border: 3px transparent solid;
+        cursor: pointer;
       }
     }
   }
 
   .right-part {
-    width: 40%;
-    height: 200vh;
-    padding: 30px;
+    width: 30%;
+    height: 120vh;
+    margin-top: -100px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ff7f5c;
-    margin-bottom: 380px;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     form {
-      width: 100%;
+      width: 80%;
       text-align: center;
-      margin-top: 90px;
 
       img {
         margin-bottom: 200px;
       }
 
       .input-group {
-        width: 100%;
         margin-bottom: 12px;
 
         input {
@@ -123,107 +111,160 @@
             transform: translateY(0.4rem);
             cursor: pointer;
           }
-
         }
         .account-btn {
-         visibility:hidden;
-
-       }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 200px) and (max-width: 630px) {
-  .login-screen {
-    width: 100%;
-    height: 100vh;
-
-    .left-part {
-      display: none;
-    }
-
-    .content-section {
-      left: 70%;
-      width: 100%;
-    }
-
-    strong {
-      font-size: 25px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .right-part {
-      width: 500vw;
-      height: 80%;
-      padding: 10px;
-      border-radius: 30px;
-      background: #ff7f5c;
-      margin-bottom: -100px;
-
-      form {
-        margin-bottom: 100px;
-        .submit-action {
-       .account-btn {
-           visibility:visible;
-           margin-top: 15px;
-         }
-     }
-      }
-
-    }
-
-    form {
-      width: 100%;
-      text-align: center;
-      margin-top: 0;
-
-      img {
-        margin-bottom: 0;
-      }
-
-      .input-group {
-        width: 100%;
-        margin-bottom: -50px;
-
-        input {
-          padding: 10px 10px;
+          visibility: hidden;
         }
       }
-
     }
-
   }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (min-width: 100px) and (max-width: 660px) {
   .login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
 
     .left-part {
-      width: 30%;
-      height: 100%;
-      margin-top: -200px;
-      margin-left: -150px;
-    }
-
-    .content-section {
-      left: 60%;
-      width: 100%;
-    }
-
-    strong {
-      font-size: 30px;
-      text-transform: uppercase;
-      font-weight: 700;
+      visibility: hidden;
     }
 
     .right-part {
-      min-width: 70%;
-      min-height: 90vh;
-      margin: 0 0 150px -80px;
+      width: 80vw;
+      height: 100vh;
+      top: 0;
+      bottom: 20;
+      transform: translate(-12%, 8%);
+      padding: 10px;
+      border-radius: 20px;
+
+      form {
+        margin-top: -40px;
+
+        img {
+          margin-bottom: 50px;
+        }
+        .submit-action {
+          .account-btn {
+            visibility: visible;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 660px) and (max-height: 1180px) and (max-width: 960px) {
+  .login-screen {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+
+    .left-part {
+      display: block;
+      width: 50%;
+      height: 50vh;
+      background-image: url("/assets/gas-station-svgrepo-com/login-img/login-img.png");
+      background-size: 85%;
+      background-repeat: no-repeat;
+      background-position: left center;
+      color: #3d5161;
+      transform: translate(-30%, 20%);
+
+      .container-section {
+        .content-section {
+          left: 45%;
+          position: relative;
+          width: 70%;
+          height: 100%;
+          display: block;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 40px;
+          transform: translateY(90%);
+
+          strong {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+
+          p {
+             font-size: 15px;
+            font-weight: 500;
+            margin-top: 20px;
+          }
+
+          button {
+            padding: 12px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+
+    .right-part {
+      width: 40%;
+      height: 130vh;
+
+    }
+  }
+}
+@media screen and (min-width: 960px) and (min-height: 1180px) {
+  .login-screen {
+
+    .left-part {
+      display: block;
+      width: 70%;
+      height: 50vh;
+
+      .container-section {
+        .content-section {
+          left: 45%;
+          position: relative;
+          width: 70%;
+          height: 100%;
+          display: block;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 40px;
+          transform: translateY(180%);
+
+          strong {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+
+          p {
+             font-size: 15px;
+            font-weight: 500;
+            margin-top: 20px;
+          }
+
+          button {
+            padding: 12px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+
+    .right-part {
+      width: 30%;
+      height: 100vh;
+
 
     }
   }

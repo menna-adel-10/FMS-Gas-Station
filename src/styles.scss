@@ -119,20 +119,18 @@ $FMS-theme: mat.define-light-theme(
 }
 
 html {
-  background: #f9f5f3;
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
-  position: relative;
   background: #f9f5f3;
 }
 
 html,
 body {
   font-family: "montserrat", sans-serif;
-  height: 100%;
+  height: 100vh;
 }
 
 /* ===== Scrollbar CSS ===== */
