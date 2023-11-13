@@ -50,6 +50,7 @@
 @media screen and (max-width: 760px) {
   .machines-container {
     width: 100%;
+    margin-top: -100px;
     .cards {
       visibility: hidden;
     }
@@ -57,7 +58,6 @@
     .mobile-view {
       width: 100%;
       display: grid;
-      margin-top: -80px;
       grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
       .btn {
         display: inline-flex;
