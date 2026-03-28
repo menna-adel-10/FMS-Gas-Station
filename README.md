@@ -1,27 +1,31 @@
-# FMS Gas Station
+# FMS Gas Station ⛽
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+A fuel management system dashboard built with Angular, designed to simulate and manage gas station operations through an intuitive and responsive interface.
 
-## Development server
+## ✨ Features
+- Dashboard for monitoring fuel-related data and operations
+- Structured data handling using mock APIs (JSON server)
+- Responsive design optimized for different screen sizes
+- Modular and reusable component-based architecture
+- Clean UI for efficient data visualization and interaction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠 Tech Stack
+- Angular (v16)
+- TypeScript
+- SCSS
+- HTML5 / CSS3
+- JSON Server (mock backend)
 
-## Code scaffolding
+## 🚀 Key Highlights
+- Built a scalable frontend architecture to handle operational data
+- Implemented reusable components to improve maintainability
+- Simulated backend interactions using REST-like mock APIs
+- Focused on responsive and user-friendly dashboard design
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
+## 📦 Getting Started
+```bash
+npm install
+ng serve
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
